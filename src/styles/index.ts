@@ -14,6 +14,10 @@ export default createGlobalStyle`
 
     body {
       font-size: 1.6rem;
+
+      * {
+        color: ${({ theme }) => theme.colors.text}
+      }
     }
   }
 

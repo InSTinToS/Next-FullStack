@@ -8,9 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/next-auth": "^3.15.0",
     "axios": "^0.21.1",
     "mongodb": "^3.6.9",
     "next": "10.0.6",
+    "next-auth": "^3.26.1",
     "next-images": "^1.7.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",

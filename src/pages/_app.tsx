@@ -1,19 +1,18 @@
 import GlobalStyle from '../styles'
-import { ThemeProvider } from 'styled-components'
-import { AppProps } from 'next/app'
-
 import theme from '../styles/theme'
 
-// Component: são todas as páginas
+import { Provider as AuthProvider } from 'next-auth/client'
+import { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
 
+    <AuthProvider session={pageProps.session}>
       <Component {...pageProps} />
-    </ThemeProvider>
-  )
-}
+    </AuthProvider>
+  </ThemeProvider>
+)
 
 export default MyApp
