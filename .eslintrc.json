@@ -20,11 +20,12 @@
   ],
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
-    "no-unused-vars": "warn",
     "prettier/prettier": "error",
-    "no-use-before-define": "off",
-    "react/prop-types": "off",
+    "no-unused-vars": "warn",
     "no-undef": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "off"
   }
 }

@@ -1,13 +1,13 @@
 import Style from '../styles/pages/styles'
 
 import { NextPage } from 'next'
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/client'
 import Head from 'next/head'
 
 interface HomeProps {}
 
 const AppPage: NextPage<HomeProps> = () => {
-  const [session, loading] = useSession()
+  const [session] = useSession()
 
   return (
     <Style>
